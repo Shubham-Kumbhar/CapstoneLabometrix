@@ -61,3 +61,4 @@ Thumbs.db.meta
 
 # VS Code
 *.vscode
+Logs/shadercompiler-UnityShaderCompiler.exe0.log
