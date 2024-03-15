@@ -7,6 +7,8 @@ TagManager:
   - Resistor
   - Battery
   - Bulb
+  - Mirror
+  - Target
   layers:
   - Default
   - TransparentFX
