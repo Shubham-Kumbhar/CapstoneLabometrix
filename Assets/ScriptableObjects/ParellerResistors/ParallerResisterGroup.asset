@@ -13,6 +13,5 @@ MonoBehaviour:
   m_Name: ParallerResisterGroup
   m_EditorClassIdentifier: 
   parallelResistor:
-  - 6
   - 1
-  - 5
+  - 3

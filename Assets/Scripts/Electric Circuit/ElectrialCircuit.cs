@@ -25,7 +25,14 @@ public class ElectrialCircuit : MonoBehaviour
     {
         var Volatage = voltage.Volatage;
         var Resistance = ClaculateEquvalentReistance();
-        return Volatage / Resistance;
+        if (Resistance == 0f)
+        {
+            return 0;
+        }
+        else
+        {
+            return Volatage / Resistance;
+        }
     }
     float ClaculateEquvalentReistance()
     {

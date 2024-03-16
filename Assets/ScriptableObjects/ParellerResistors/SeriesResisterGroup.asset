@@ -13,9 +13,7 @@ MonoBehaviour:
   m_Name: SeriesResisterGroup
   m_EditorClassIdentifier: 
   ParallerResisters:
-  - {fileID: 11400000, guid: ed918d2c54a0ce24484a20f1c19bc84a, type: 2}
   - {fileID: 11400000, guid: 8bcb5d6c7aec0a24c9019cc3c4b7485a, type: 2}
   SeriesResister:
-  - 1
-  - 12
-  - 5
+  - 0
+  - 0
