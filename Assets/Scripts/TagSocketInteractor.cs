@@ -80,12 +80,12 @@ public class TagSocketInteractor : XRSocketInteractor
     }
 
 
-    protected void OnTriggerEnter(Collider other)
+    protected new void OnTriggerEnter(Collider other)
     {
         Resistor = other.gameObject;
     }
 
-    protected void OnTriggerExit(Collider other)
+    protected new void OnTriggerExit(Collider other)
     {
         Resistor = null;
     }
