@@ -8,8 +8,10 @@ using UnityEngine;
 public class ElectrialCircuit : MonoBehaviour
 {
     // Start is called before the first frame update
+    [SerializeField] private BatteyVoltage voltage;
     [SerializeField] private SeriesResisterGroup resisterGroup;
     ParallerResisterGroup[] parallerResisterGroups;
+    bool isBrokenCircuit;
     float[] seriesResistorGroup;
     void Start()
     {
@@ -21,8 +23,9 @@ public class ElectrialCircuit : MonoBehaviour
     }
     float CurrentCalculation()
     {
-        var Volatage = 10f;
-        return Volatage / ClaculateEquvalentReistance();
+        var Volatage = voltage.Volatage;
+        var Resistance = ClaculateEquvalentReistance();
+        return Volatage / Resistance;
     }
     float ClaculateEquvalentReistance()
     {
@@ -40,7 +43,10 @@ public class ElectrialCircuit : MonoBehaviour
             var EquvalentReistance = 0f;
             foreach (float resistor in resistors)
             {
-                EquvalentReistance += 1 / resistor;
+                if (resistor == 0)
+                    continue;
+                else
+                    EquvalentReistance += 1 / resistor;
             }
             TotalEQresistance += TotalEQresistance;
         }
@@ -51,7 +57,14 @@ public class ElectrialCircuit : MonoBehaviour
         var TotalEQresistance = 0f;
         foreach (float resistor in seriesResistorGroup)
         {
-            TotalEQresistance += resistor;
+            if (resistor == 0)
+            {
+                return 0f;
+            }
+            else
+            {
+                TotalEQresistance += resistor;
+            }
         }
         return TotalEQresistance + ParelleEquvaltenResistanceCalculator();
     }
