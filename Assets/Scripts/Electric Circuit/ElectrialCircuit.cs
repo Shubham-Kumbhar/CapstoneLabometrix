@@ -7,6 +7,7 @@ public class ElectrialCircuit : MonoBehaviour
 {
     // Start is called before the first frame update
     private float current;
+    [SerializeField] private ExperimentEvents CompletionEvent;
     [SerializeField] private Light lightBulb;
     [SerializeField] private float currentToAchive;
     [SerializeField] private TextMeshProUGUI Text;
@@ -31,10 +32,12 @@ public class ElectrialCircuit : MonoBehaviour
         if (current == currentToAchive && bulb.isPlaced)
         {
             lightBulb.gameObject.SetActive(true);
+            CompletionEvent.ExperimentCompleted =true;
         }
         else
         {
             lightBulb.gameObject.SetActive(false);
+            CompletionEvent.ExperimentCompleted =false;
         }
     }
     float CurrentCalculation()
