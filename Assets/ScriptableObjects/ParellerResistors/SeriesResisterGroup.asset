@@ -9,8 +9,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 690929a59dc7a42da9030305190d391f, type: 3}
-  m_Name: XRDeviceSimulatorSettings
+  m_Script: {fileID: 11500000, guid: 0ade732fcd3612e4db7ce210363a52a7, type: 3}
+  m_Name: SeriesResisterGroup
   m_EditorClassIdentifier: 
-  m_AutomaticallyInstantiateSimulatorPrefab: 0
-  m_SimulatorPrefab: {fileID: 0}
+  ParallerResisters:
+  - {fileID: 11400000, guid: ed918d2c54a0ce24484a20f1c19bc84a, type: 2}
+  SeriesResister:
+  - 0
+  - 0
