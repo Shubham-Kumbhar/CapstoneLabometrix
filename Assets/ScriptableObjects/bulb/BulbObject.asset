@@ -9,9 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: baeb693cffeed66438fbe39f31934fc0, type: 3}
-  m_Name: ParallerResisterGroup
+  m_Script: {fileID: 11500000, guid: ec9886d6c7a4c074e801aefbea1ad77d, type: 3}
+  m_Name: BulbObject
   m_EditorClassIdentifier: 
-  parallelResistor:
-  - 0
-  - 0
+  isPlaced: 1

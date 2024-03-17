@@ -9,7 +9,7 @@ public class TagSocketInteractor : XRSocketInteractor
     [Space]
     [Space]
     [Header("Electricity")]
-    public GameObject Resistor;
+    public GameObject ElectricComponent;
     public bool isbulb;
     public bool isBattery;
     public bool isResistor;
@@ -18,7 +18,12 @@ public class TagSocketInteractor : XRSocketInteractor
     public SeriesResisterGroup Series;
     public ParallerResisterGroup Paraller;
     public BatteyVoltage batteyVoltage;
-
+    public BulbObject Bulb;
+    protected override void Start()
+    {
+        base.Start();
+        Initalization();
+    }
     public override bool CanHover(IXRHoverInteractable interactable)
     {
         return base.CanHover(interactable) && interactable.transform.tag == objectTag;
@@ -32,7 +37,7 @@ public class TagSocketInteractor : XRSocketInteractor
     protected override void OnSelectEntering(SelectEnterEventArgs args)
     {
         base.OnSelectEntering(args);
-        var ComponentValue = Resistor.transform.GetComponent<IElectricComponents>().GetComponentValue();
+        var ComponentValue = ElectricComponent.transform.GetComponent<IElectricComponents>().GetComponentValue();
         if (isResistor)
         {
             if (isInParallel)
@@ -46,7 +51,7 @@ public class TagSocketInteractor : XRSocketInteractor
         }
         if (isbulb)
         {
-            
+            Bulb.isPlaced = true;
         }
         if (isBattery)
         {
@@ -70,7 +75,7 @@ public class TagSocketInteractor : XRSocketInteractor
         }
         if (isbulb)
         {
-
+            Bulb.isPlaced = false;
         }
         if (isBattery)
         {
@@ -78,16 +83,38 @@ public class TagSocketInteractor : XRSocketInteractor
         }
 
     }
+    void Initalization()
+    {
+        if (isResistor)
+        {
+            if (isInParallel)
+            {
+                Paraller.parallelResistor[ResistanceIndex] = 0;
+            }
+            else
+            {
+                Series.SeriesResister[ResistanceIndex] = 0;
+            }
+        }
+        if (isbulb)
+        {
+            Bulb.isPlaced = false;
+        }
+        if (isBattery)
+        {
+            batteyVoltage.Volatage = 0;
+        }
+    }
 
 
     protected new void OnTriggerEnter(Collider other)
     {
-        Resistor = other.gameObject;
+        ElectricComponent = other.gameObject;
     }
 
     protected new void OnTriggerExit(Collider other)
     {
-        Resistor = null;
+        ElectricComponent = null;
     }
 
 }

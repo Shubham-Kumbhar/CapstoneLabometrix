@@ -1,13 +1,16 @@
 using System;
 using System.Collections;
-using System.Collections.Generic;
-using Unity.Mathematics;
-using Unity.PlasticSCM.Editor.WebApi;
 using UnityEngine;
+using TMPro;
 
 public class ElectrialCircuit : MonoBehaviour
 {
     // Start is called before the first frame update
+    private float current;
+    [SerializeField] private Light lightBulb;
+    [SerializeField] private float currentToAchive;
+    [SerializeField] private TextMeshProUGUI Text;
+    [SerializeField] private BulbObject bulb;
     [SerializeField] private BatteyVoltage voltage;
     [SerializeField] private SeriesResisterGroup resisterGroup;
     ParallerResisterGroup[] parallerResisterGroups;
@@ -15,11 +18,24 @@ public class ElectrialCircuit : MonoBehaviour
     float[] seriesResistorGroup;
     void Start()
     {
-        Debug.Log(CurrentCalculation());
+
     }
     void Update()
     {
-
+        current = CurrentCalculation();
+        Text.text = current.ToString();
+        TunonLightBulb();
+    }
+    void TunonLightBulb()
+    {
+        if (current == currentToAchive && bulb.isPlaced)
+        {
+            lightBulb.gameObject.SetActive(true);
+        }
+        else
+        {
+            lightBulb.gameObject.SetActive(false);
+        }
     }
     float CurrentCalculation()
     {
@@ -55,7 +71,7 @@ public class ElectrialCircuit : MonoBehaviour
                 else
                     EquvalentReistance += 1 / resistor;
             }
-            TotalEQresistance += TotalEQresistance;
+            TotalEQresistance += EquvalentReistance;
         }
         return TotalEQresistance;
     }
@@ -73,7 +89,15 @@ public class ElectrialCircuit : MonoBehaviour
                 TotalEQresistance += resistor;
             }
         }
-        return TotalEQresistance + ParelleEquvaltenResistanceCalculator();
+        var parallerEQResistance = ParelleEquvaltenResistanceCalculator();
+        if (parallerEQResistance == 0)
+        {
+            return 0f;
+        }
+        else
+        {
+            return TotalEQresistance + parallerEQResistance;
+        }
     }
 
 }
