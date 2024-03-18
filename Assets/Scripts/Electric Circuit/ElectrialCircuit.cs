@@ -17,10 +17,6 @@ public class ElectrialCircuit : MonoBehaviour
     ParallerResisterGroup[] parallerResisterGroups;
     bool isBrokenCircuit;
     float[] seriesResistorGroup;
-    void Start()
-    {
-
-    }
     void Update()
     {
         current = CurrentCalculation();
@@ -32,12 +28,12 @@ public class ElectrialCircuit : MonoBehaviour
         if (current == currentToAchive && bulb.isPlaced)
         {
             lightBulb.gameObject.SetActive(true);
-            CompletionEvent.ExperimentCompleted =true;
+            CompletionEvent.ExperimentCompleted = true;
         }
         else
         {
             lightBulb.gameObject.SetActive(false);
-            CompletionEvent.ExperimentCompleted =false;
+            CompletionEvent.ExperimentCompleted = false;
         }
     }
     float CurrentCalculation()
