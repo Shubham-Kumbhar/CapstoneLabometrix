@@ -50,7 +50,6 @@ public class LazerBeam : MonoBehaviour
                         if (hit.transform.tag == "Target")
                         {
                             EventCompletions.ExperimentCompleted = true;
-                            Debug.Log("Target Hit");
                         }
                         else
                         {

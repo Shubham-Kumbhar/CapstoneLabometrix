@@ -12,9 +12,6 @@ public class Experiments : MonoBehaviour
         foreach (ExperimentEvents Event in experimentEvent)
         {
             a = a & Event.ExperimentCompleted;
-            Debug.Log(a = a & Event.ExperimentCompleted);
-
-
         }
         if (a)
         {
