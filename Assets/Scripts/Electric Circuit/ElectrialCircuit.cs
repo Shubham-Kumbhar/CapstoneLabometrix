@@ -20,7 +20,7 @@ public class ElectrialCircuit : MonoBehaviour
     void Update()
     {
         current = CurrentCalculation();
-        Text.text = current.ToString();
+        Text.text = $"Achive : \n{currentToAchive} \n Circuit :\n{current}  ";
         TunonLightBulb();
     }
     void TunonLightBulb()
