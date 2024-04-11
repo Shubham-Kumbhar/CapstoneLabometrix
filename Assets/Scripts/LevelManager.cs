@@ -5,6 +5,8 @@ using UnityEngine;
 public class LevelManager : MonoBehaviour
 {
     public ExperimentEvents[] ExperimentEvents;
+    [SerializeField] private GameObject[] CompletionIndecators;
+    int count;
     public static LevelManager Instance;
     void Awake()
     {
@@ -22,9 +24,14 @@ public class LevelManager : MonoBehaviour
         }
     }
 
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {
-
+        count = 0;
+        foreach (ExperimentEvents events in ExperimentEvents) if (events.ExperimentCompleted) count++;
+        foreach (GameObject Object in CompletionIndecators) Object.SetActive(false);
+        for (int i = 0; i < count; i++)
+        {
+            CompletionIndecators[i].SetActive(true);
+        }
     }
 }

@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Cylinder
   m_EditorClassIdentifier: 
   ShapeTag: Cylinder
-  isCorrect: 0
+  isCorrect: 1

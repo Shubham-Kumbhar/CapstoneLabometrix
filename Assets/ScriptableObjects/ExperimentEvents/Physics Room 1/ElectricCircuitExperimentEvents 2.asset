@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5bdeaac86a5185d448b7d43dbc2ab513, type: 3}
   m_Name: ElectricCircuitExperimentEvents 2
   m_EditorClassIdentifier: 
-  ExperimentCompleted: 0
+  ExperimentCompleted: 1

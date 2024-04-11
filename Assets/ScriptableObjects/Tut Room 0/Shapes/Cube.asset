@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Cube
   m_EditorClassIdentifier: 
   ShapeTag: Cube
-  isCorrect: 0
+  isCorrect: 1

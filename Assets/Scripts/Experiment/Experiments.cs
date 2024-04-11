@@ -10,19 +10,22 @@ public class Experiments : MonoBehaviour
     {
         experimentEvent = LevelManager.Instance.ExperimentEvents;
     }
+    private void Update()
+    {
+        LevelCompletions();
+    }
     public void LevelCompletions()
     {
-        bool a = true;
         foreach (ExperimentEvents Event in experimentEvent)
         {
-            a = a & Event.ExperimentCompleted;
-        }
-        if (a)
-        {
-            foreach (GameObject objects in gameObjects)
+            if (!Event.ExperimentCompleted)
             {
-                objects.SetActive(false);
+                return;
             }
+        }
+        foreach (GameObject objects in gameObjects)
+        {
+            objects.SetActive(false);
         }
     }
 

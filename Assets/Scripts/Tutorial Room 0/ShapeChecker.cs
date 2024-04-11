@@ -15,6 +15,7 @@ public class ShapeChecker : MonoBehaviour
     {
         shape.isCorrect = false;
         image.sprite = NeutralSprite;
+        shape.isCorrect = false;
     }
     private void OnTriggerEnter(Collider other)
     {

@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Sphere
   m_EditorClassIdentifier: 
   ShapeTag: Sphere
-  isCorrect: 0
+  isCorrect: 1
