@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class LevelManager : MonoBehaviour
 {
-    public ExperimentEvents [] ExperimentEvents;
+    public ExperimentEvents[] ExperimentEvents;
     public static LevelManager Instance;
-    void Start()
+    void Awake()
     {
         if (LevelManager.Instance != null)
         {
@@ -16,9 +16,9 @@ public class LevelManager : MonoBehaviour
         {
             Instance = this;
         }
-        foreach(ExperimentEvents Events in ExperimentEvents)
+        foreach (ExperimentEvents Events in ExperimentEvents)
         {
-            Events.ExperimentCompleted =false;
+            Events.ExperimentCompleted = false;
         }
     }
 

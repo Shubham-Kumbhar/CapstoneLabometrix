@@ -6,6 +6,10 @@ public class Experiments : MonoBehaviour
 {
     [SerializeField] private GameObject[] gameObjects;
     [SerializeField] private ExperimentEvents[] experimentEvent;
+    private void Start()
+    {
+        experimentEvent = LevelManager.Instance.ExperimentEvents;
+    }
     public void LevelCompletions()
     {
         bool a = true;

@@ -9,6 +9,9 @@ TagManager:
   - Bulb
   - Mirror
   - Target
+  - Cube
+  - Cylinder
+  - Sphere
   layers:
   - Default
   - TransparentFX
