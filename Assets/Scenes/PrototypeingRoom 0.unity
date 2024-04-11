@@ -14015,7 +14015,6 @@ MonoBehaviour:
   CompletionIndecators:
   - {fileID: 2095618742}
   - {fileID: 1518042712}
-  - {fileID: 0}
 --- !u!4 &2045466847
 Transform:
   m_ObjectHideFlags: 0

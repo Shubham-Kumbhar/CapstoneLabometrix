@@ -10,10 +10,6 @@ public class Experiments : MonoBehaviour
     {
         experimentEvent = LevelManager.Instance.ExperimentEvents;
     }
-    private void Update()
-    {
-        LevelCompletions();
-    }
     public void LevelCompletions()
     {
         foreach (ExperimentEvents Event in experimentEvent)
