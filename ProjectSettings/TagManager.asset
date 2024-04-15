@@ -13,6 +13,7 @@ TagManager:
   - Cylinder
   - Sphere
   - Weight
+  - Litmus
   layers:
   - Default
   - TransparentFX
