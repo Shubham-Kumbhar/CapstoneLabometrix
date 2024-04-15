@@ -4,9 +4,11 @@ using UnityEngine;
 
 public class LevelManager : MonoBehaviour
 {
-    public ExperimentEvents [] ExperimentEvents;
+    public ExperimentEvents[] ExperimentEvents;
+    [SerializeField] private GameObject[] CompletionIndecators;
+    int count;
     public static LevelManager Instance;
-    void Start()
+    void Awake()
     {
         if (LevelManager.Instance != null)
         {
@@ -16,15 +18,20 @@ public class LevelManager : MonoBehaviour
         {
             Instance = this;
         }
-        foreach(ExperimentEvents Events in ExperimentEvents)
+        foreach (ExperimentEvents Events in ExperimentEvents)
         {
-            Events.ExperimentCompleted =false;
+            Events.ExperimentCompleted = false;
         }
     }
 
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {
-
+        count = 0;
+        foreach (ExperimentEvents events in ExperimentEvents) if (events.ExperimentCompleted) count++;
+        foreach (GameObject Object in CompletionIndecators) Object.SetActive(false);
+        for (int i = 0; i < count; i++)
+        {
+            CompletionIndecators[i].SetActive(true);
+        }
     }
 }
