@@ -203,32 +203,32 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: cdb53e198a1338549b6e4ee7af4c285a,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 1130.135
+      value: 3117.9294
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: cdb53e198a1338549b6e4ee7af4c285a,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 1130.135
+      value: 3117.9294
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: cdb53e198a1338549b6e4ee7af4c285a,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 1130.135
+      value: 3117.9294
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: cdb53e198a1338549b6e4ee7af4c285a,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -31.871
+      value: -88.683
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: cdb53e198a1338549b6e4ee7af4c285a,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 11.892
+      value: 34.9
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: cdb53e198a1338549b6e4ee7af4c285a,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 28.9
+      value: 180.7
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: cdb53e198a1338549b6e4ee7af4c285a,
         type: 3}
@@ -265,6 +265,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: cdb53e198a1338549b6e4ee7af4c285a,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: ecc48755059810c449ba0a96ae625058, type: 2}
     - target: {fileID: 919132149155446097, guid: cdb53e198a1338549b6e4ee7af4c285a,
         type: 3}
       propertyPath: m_Name
@@ -1457,8 +1462,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_text: "Welcome !!!\nThis Project is Made by Students of VIt bhopal this project
-    Is Vr Escape Room Which Promtes Stem Education \n\n-Shubham Kumbhar (20BCG10013)\n-Manav
-    Singh (20BCG10020)\n-sankalp jajodia (20BCG10033)\n-Yashavee yier (20BCG10012)"
+    Is Vr Escape Room Which Promotes Stem Education \n\n-Shubham Kumbhar (20BCG10013)\n-Manav
+    Singh (20BCG10020)\n-Sankalp jajodia (20BCG10033)\n-Yashavee yier (20BCG10012)"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -3338,6 +3343,55 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1685213412}
   m_CullTransparentMesh: 1
+--- !u!1 &1756802122
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1756802124}
+  - component: {fileID: 1756802123}
+  m_Layer: 0
+  m_Name: Global Volume
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1756802123
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1756802122}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 172515602e62fb746b5d573b38a5fe58, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_IsGlobal: 1
+  priority: 0
+  blendDistance: 0
+  weight: 1
+  sharedProfile: {fileID: 11400000, guid: f75a1e86b2032e64288aa5b836823938, type: 2}
+--- !u!4 &1756802124
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1756802122}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.76184434, y: 1.1205881, z: -2.062853}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1802507923
 GameObject:
   m_ObjectHideFlags: 0
@@ -3999,3 +4053,4 @@ SceneRoots:
   - {fileID: 98848816}
   - {fileID: 1486544285}
   - {fileID: 431709129}
+  - {fileID: 1756802124}
