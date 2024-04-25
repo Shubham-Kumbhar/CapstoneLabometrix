@@ -15,6 +15,7 @@ TagManager:
   - Weight
   - Litmus
   - Baeker
+  - Base soluion
   layers:
   - Default
   - TransparentFX

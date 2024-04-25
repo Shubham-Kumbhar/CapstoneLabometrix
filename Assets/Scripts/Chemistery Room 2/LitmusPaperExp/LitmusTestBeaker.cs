@@ -6,6 +6,7 @@ public class LitmusTestBeaker : MonoBehaviour
 {
     public bool isAcidic;
     bool isLitmusPaper;
+    public ExperimentEvents EventComplition;
     private void OnTriggerEnter(Collider other)
     {
         if (other.tag == "Litmus")
@@ -17,7 +18,12 @@ public class LitmusTestBeaker : MonoBehaviour
     {
         if (other.tag == "Litmus" && isLitmusPaper)
         {
-            other.GetComponent<Litmuspaper>().colorChange(isAcidic);
+            var Litmuspaper = other.GetComponent<Litmuspaper>();
+            Litmuspaper.colorChange(isAcidic);
+            if (Litmuspaper.ProcessComplete)
+            {
+                EventComplition.ExperimentCompleted = true;
+            }
         }
     }
     private void OnTriggerExit(Collider other)

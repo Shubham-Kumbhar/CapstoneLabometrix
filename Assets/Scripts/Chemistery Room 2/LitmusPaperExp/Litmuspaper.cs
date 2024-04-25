@@ -10,11 +10,19 @@ public class Litmuspaper : MonoBehaviour
     public Color Basic;
     public Color netural;
     public Material mat;
+    public bool ProcessComplete = false;
     [Range(0, 1)] float weight;
     public float Speed;
     private void Start()
     {
         mat.color = netural;
+    }
+    private void Update()
+    {
+        if (weight >= 0)
+        {
+            ProcessComplete = true;
+        }
     }
     // Update is called once per frame
     public void colorChange(bool isAcidic)

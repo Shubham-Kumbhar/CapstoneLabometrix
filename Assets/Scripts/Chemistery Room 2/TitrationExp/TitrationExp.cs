@@ -6,6 +6,8 @@ using UnityEngine;
 public class TitrationExp : MonoBehaviour
 {
     public ExperimentEvents ExperimetCompltion;
+    public GameObject[] turnOnObjects;
+    bool turnOnBool = true;
     public bool IsInteracting;
     public float SppedofFlow;
     [Range(0, 1)] public float fullamout;
@@ -65,6 +67,14 @@ public class TitrationExp : MonoBehaviour
             ExperimetCompltion.ExperimentCompleted = true;
             //Complete
             Debug.Log("Completion");
+            if (turnOnBool)
+            {
+                turnOnBool = false;
+                foreach (var item in turnOnObjects)
+                {
+                    item.SetActive(true);
+                }
+            }
         }
     }
 }
