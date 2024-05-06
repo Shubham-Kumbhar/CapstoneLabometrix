@@ -13,6 +13,9 @@ TagManager:
   - Cylinder
   - Sphere
   - Weight
+  - Litmus
+  - Baeker
+  - Base soluion
   layers:
   - Default
   - TransparentFX
