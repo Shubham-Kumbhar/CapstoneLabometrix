@@ -6,7 +6,8 @@ public class LevelManager : MonoBehaviour
 {
     public ExperimentEvents[] ExperimentEvents;
     [SerializeField] private GameObject[] CompletionIndecators;
-    int count;
+    [SerializeField] private AudioClip SuccessAudioClip;
+    int index, previos;
     public static LevelManager Instance;
     void Awake()
     {
@@ -26,12 +27,25 @@ public class LevelManager : MonoBehaviour
 
     private void Update()
     {
-        count = 0;
-        foreach (ExperimentEvents events in ExperimentEvents) if (events.ExperimentCompleted) count++;
+        index = 0;
+        foreach (ExperimentEvents events in ExperimentEvents)
+        {
+            if (events.ExperimentCompleted)
+            {
+                index++;
+                if (index > previos)
+                {
+                    SoundManager.instance.PlaySFX(SuccessAudioClip);
+                    previos = index;
+                }
+            }
+        }
+
         foreach (GameObject Object in CompletionIndecators) Object.SetActive(false);
-        for (int i = 0; i < count; i++)
+        for (int i = 0; i < index; i++)
         {
             CompletionIndecators[i].SetActive(true);
         }
+
     }
 }
