@@ -136,12 +136,12 @@ PrefabInstance:
         type: 3}
       propertyPath: m_audioClip
       value: 
-      objectReference: {fileID: 8300000, guid: addffd82df355404c9d81948f3faedd4, type: 3}
+      objectReference: {fileID: 0}
     - target: {fileID: 863202227143140332, guid: 9131bb9d7c7416742bab0e3e385af4c0,
         type: 3}
       propertyPath: m_audioClip
       value: 
-      objectReference: {fileID: 8300000, guid: 5acda702056e52743be5a62b6b076404, type: 3}
+      objectReference: {fileID: 0}
     - target: {fileID: 4076674825027340373, guid: 9131bb9d7c7416742bab0e3e385af4c0,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -231,9 +231,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c3e18b2debd31df4f8a38a957dbe17b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  buttons: []
-  playClip: {fileID: 0}
-  musicClip: {fileID: 0}
+  buttons:
+  - {fileID: 1685213414}
+  - {fileID: 1197175307}
+  - {fileID: 382780211}
+  playClip: {fileID: 8300000, guid: 5acda702056e52743be5a62b6b076404, type: 3}
+  musicClip: {fileID: 8300000, guid: addffd82df355404c9d81948f3faedd4, type: 3}
 --- !u!4 &82422959
 Transform:
   m_ObjectHideFlags: 0
