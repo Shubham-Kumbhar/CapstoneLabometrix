@@ -3799,7 +3799,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ebb97c0d8dbdb54981a5bb442c0078a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  musicClip: {fileID: 8300000, guid: 5969dd2fcadb8f240bed5278c8b9bbd6, type: 3}
+  musicClip: {fileID: 8300000, guid: 04eb0c624c594f0458a8db505bbcd35a, type: 3}
   pushButtonClip: {fileID: 8300000, guid: fbc7f11e528adcd43b3371aedb503abf, type: 3}
   PlacedClip: {fileID: 8300000, guid: 4993566b01a8010438b4735ad317366c, type: 3}
 --- !u!4 &206798471
@@ -52605,7 +52605,7 @@ MonoBehaviour:
   - {fileID: 602030680}
   - {fileID: 56272786}
   - {fileID: 1767314377}
-  SuccessAudioClip: {fileID: 0}
+  SuccessAudioClip: {fileID: 8300000, guid: 375a558dfb7b3bf45b1a62c8d9545766, type: 3}
 --- !u!4 &2045466847
 Transform:
   m_ObjectHideFlags: 0

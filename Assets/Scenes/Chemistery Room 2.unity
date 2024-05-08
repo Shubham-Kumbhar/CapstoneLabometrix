@@ -28290,7 +28290,7 @@ MonoBehaviour:
   - {fileID: 2095618742}
   - {fileID: 1518042712}
   - {fileID: 1014226275}
-  SuccessAudioClip: {fileID: 0}
+  SuccessAudioClip: {fileID: 8300000, guid: 375a558dfb7b3bf45b1a62c8d9545766, type: 3}
 --- !u!4 &2045466847
 Transform:
   m_ObjectHideFlags: 0
