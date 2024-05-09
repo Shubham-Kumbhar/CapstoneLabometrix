@@ -38,5 +38,6 @@ public enum Experiment
 {
     MainMenu,
     TutRoom0,
-    PhysicRoom1
+    PhysicRoom1,
+    ChemisteryRoom2
 }

@@ -8529,7 +8529,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 23f8d164631e3494b88c0f3e4b949e7e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  musicClip: {fileID: 8300000, guid: 5969dd2fcadb8f240bed5278c8b9bbd6, type: 3}
+  musicClip: {fileID: 8300000, guid: 17a79364082701046b70ad24dbe5887b, type: 3}
   pushButtonClip: {fileID: 8300000, guid: 93b7464948b9f1c4592cf8dbd14e491b, type: 3}
   PlacedClip: {fileID: 8300000, guid: 6ca65ba5b1874554e82b7f4bf3f20e24, type: 3}
 --- !u!4 &583417491
@@ -18545,7 +18545,7 @@ MonoBehaviour:
   - {fileID: 1272914972}
   - {fileID: 1490731087}
   experimentEvent: []
-  nextScene: 0
+  nextScene: 2
 --- !u!1 &1348553529
 GameObject:
   m_ObjectHideFlags: 0
